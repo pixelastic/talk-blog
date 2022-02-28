@@ -1,6 +1,6 @@
 {
-  "description": "Your website description. You can overwrite it in any pug file",
-  "title": "Default page title. You can overwrite it in any pug file",
-  "twitter": "yourusername",
-  "productionUrl": "https://www.your-production-url.com/"
+  "title": "Syndrome de la page blanche: quelques conseils",
+  "description": "Tech Blog: vaincre le syndrome de la page blanche",
+  "twitter": "pixelastic",
+  "productionUrl": "https://talks.pixelastic.com/slides/humantalks-blog/"
 }
