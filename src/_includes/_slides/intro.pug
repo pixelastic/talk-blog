@@ -36,12 +36,13 @@ block content
   //- Version longue: Blague sur avoir un blog perso sur lequel on a passé du
   //- temps à choisir le framework, le nom de domaine, les perfs et la CI.
   //- Maintenant faut écrire dessus...
-  +slide
-    +title Conseils
-    .flex.flex-col.flex-center.h-100p
-      .flex.flex-col.text-5 
-        | Image de plusieurs blogs techs (ManoMano, LeBonCoin, Algolia, Alan,
-        | Doctolib)
+  +slide.h-100p
+    +title Écrire sur le blog tech corporate
+    .flex.flex-row.h-100p.flex-wrap
+      each blogName in data.blogs
+        .flex-none.w-25p.flex.flex-center
+          img.shadow-3.w-80p(src=`./assets/blog-${blogName}.png`)
+
 
 
   //- CASSER LE MYTHE
