@@ -9,18 +9,24 @@ block content
   //- Aime en pro et perso le partage de connaissance tech
   //- Avec la pandémie, moins de meetups physique, contenu qu'on peut lire
   //- Plus de blog
-  +slide.debug
+  +slide
     +title Qui suis-je ?
-    .flex.flex-row
-      .flex-none.w-60p one
-      .flex-none.w-40p two
-
-    //- .flex.flex-col.flex-center.h-100p
-    //-   .flex.flex-col.text-5 Tim Carry, Dev advocate CS, organize HT
-    //- .notes
-    //-   | Pandémie nous passe en online
-    //-   | Picture. Logo HumanTalks et Contentsquare
-    //-   | Organizer et Developer Advocate
+    .flex.h-100p.flex-row.flex-center
+      .flex.flex-row.w-90p
+        .flex-none.w-66p.flex.flex-center
+          .flex-col.w-90p
+            .block.text-7.lh-1 Tim Carry
+            .block.text-4.gray-7 Developer Advocate
+            .block.green.text-4
+              .inline @
+              .inline.underline pixelastic
+            .flex.flex-row.mt-5
+              .flex-none.w-33p.flex.flex-main-start.flex-cross-center
+                img.h-80p(src=`./assets/humantalks-black.png`, alt="HumanTalks")
+              .flex-none.w-50p.flex.flex-center
+                img.w-100p(src=`./assets/contentsquare.png`, alt="Contentsquare")
+        .flex-none.w-33p.flex.flex-center
+          img.h-20.rounded-full(src="./assets/avatar.jpg")
 
   //- POURQUOI
   //- Peut-être un blog perso un peu vide
