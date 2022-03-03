@@ -1,17 +1,16 @@
 block content
   //- CONCLUSION
-  //- Looks Good To Me
-  //- Prêt à publier
-  //-
-  //- Avec toutes ses étapes, on découpe une tâche qui fait peur en petites
-  //- sous-parties
-  //- Balancer des idées en vrac
-  //- Raconter une histoire avec
-  //- Linter le texte
-  //-
-  //- Envoyez moi les liens de vos articles, je les lirai et partagerai avec
-  //- plaisir
-  //- https://ih1.redbubble.net/image.175194664.2039/st,small,507x507-pad,600x600,f8f8f8.u5.jpg
   +slide
-    +title Thank you
-    .flex.flex-col.flex-center.h-100p
+    .flex.flex-col.h-100p
+      .absolute.inset-0
+        .flex.flex-row.h-100p.flex-wrap
+          each blogName in data.blogs
+            .flex-none.w-25p.flex.flex-center
+              img.shadow-3.w-80p(src=`./assets/blog-${blogName}.png`)
+      .absolute.inset-0.bg-black.bg-opacity-75p
+
+      .flex-auto.flex.flex-col.flex-center.relative.z-9
+        .text-8.white.text-shadow.bold Merci
+        a.text-5.helvetica.white.text-shadow.underline.bold(href="https://engineering.contentsquare.com/") engineering.contentsquare.com
+        .absolute.bottom-0.right-0.w-33p.p-1
+          img.w-100p(src=`./assets/contentsquare-light.svg`, alt="Contentsquare")

@@ -1,0 +1,71 @@
+block content
+  //- DEBRANCHEZ VOTRE CERVEAU
+  +slide
+    .flex.flex-col.h-100p.bg-cover.bg-no-repeat.bg-right(style="background-image:url(./assets/unplug-brain-cropped.jpg") 
+      +title.white.text-5 Édition
+      .flex-auto.w-65p.flex.flex-col
+        .text-shadow.white.text-4.pl-5.mt-10.bold
+          div Débranchez votre cerveau créatif
+          div Passez en pilotage automatique
+          div Détachez-vous de vos idées
+
+  //- RUBBER DUCK
+  +slide
+    .flex.flex-row.h-100p
+      .flex-none.w-25p.bg-no-repeat.bg-cover.bg-center(style="background-image: url(./assets/rubber-duck.jpg)")
+      .flex-none.w-75p.flex.flex-row
+        .flex.flex-auto.flex-col
+          +title Faire comprendre l'histoire à quelqu'un d'autre
+          .flex-auto.flex.flex-col.flex-center.p-3
+            .flex.flex-col
+              .italic.text-4.mb-6.bold Écrivez comme si vous parliez à un ami.
+              .gray-8
+                div Permet de :
+                .ml-5
+                  .bullet-teal.bullet-arrow Garder un ton cohérent
+                  .bullet-teal.bullet-arrow Rendre le message personnel
+                  .bullet-teal.bullet-arrow Donner le bon niveau d'abstraction
+
+  mixin pr_check(title, description, border_class)
+      .flex-row.flex.border-gray-4(class=border_class)
+        //- Check
+        .flex.flex-col.py-2.px-4
+          .bg-green.rounded-100p.flex.flex-col.flex-center.p-1
+            .h-6.w-6.white.fill-current!=include("assets/svg/check.svg")
+        //- Name
+        .flex.flex-col.flex-main-center.flex-auto.my-3
+          .bold.text-2=title
+          .gray-7.text-1=description
+
+  //- BEST PRACTICE AS CODE
+  +slide
+    +title Mêmes bonnes pratiques que pour du code
+    .flex.flex-row.h-100p.flex-center
+      .flex.flex-row.w-80p
+        //- Merge icon
+        .flex-none.px-2
+          .bg-gray.p-2.rounded-4
+            .h-7.w-7.white.fill-current!=include("assets/svg/merge.svg")
+        //- List of checks
+        .flex-auto.helvetica
+          .border-001.border-gray-4.rounded-4.flex.flex-col
+            +pr_check("Linting", "Grammaire, fautes de frappe, capitalisation, liens, etc.", "border-b-001")
+            +pr_check("Peer Review", "Partager le GDoc à des collègues avec droits de suggestion.", "border-b-001")
+            +pr_check("Refactoring", "Supprimer des mots, des phrases et même des paragraphes.")
+
+
+  //- BLAISE PASCAL
+  +slide
+    .flex.flex-row.h-100p
+      .flex-none.w-60p.flex.flex-center.flex-col
+        .flex-col
+          .text-5.text-left.lh-tight.bold.text-shadow.text-shadow-gray.gray-8
+            div Si j'avais eu
+            div #[.inline.teal.text-shadow plus de temps],
+            div j'aurais écrit une lettre
+            div #[.inline.teal.text-shadow plus courte].
+          .text-4.gray-6.mt-4 
+            .inline — Blaise Pascal
+      .flex-none.w-40p.h-100p.bg-cover.bg-no-repeat.bg-center(style="background-image:url(./assets/blaise-pascal.jpg")
+
+  

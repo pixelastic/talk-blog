@@ -1,14 +1,13 @@
 block content
   //- TITLE
-  +slide.bg-green
-    .flex.flex-center.h-100p.px-3
-      .flex.text-6.white.bold.text-shadow.w-90p=data.meta.title
+  +slide
+    .flex.flex-col.h-100p.bg-no-repeat.bg-cover.bg-center(style="background-image: url(./assets/title.jpg)")
+      .flex-auto.flex.flex-col.flex-center
+        .text-left.white.text-shadow
+          .bold.text-7 Blog Tech
+          .text-4 Vaincre le syndrome de la page blanche
 
-  //- SPEAKER
-  //- Developer Advocate et Co-Organizer de meetups
-  //- Aime en pro et perso le partage de connaissance tech
-  //- Avec la pandémie, moins de meetups physique, contenu qu'on peut lire
-  //- Plus de blog
+  //- WHO AM I?
   +slide
     +title Qui suis-je ?
     .flex.h-100p.flex-row.flex-center
@@ -24,68 +23,55 @@ block content
               .flex-none.w-33p.flex.flex-main-start.flex-cross-center
                 img.h-80p(src=`./assets/humantalks-black.png`, alt="HumanTalks")
               .flex-none.w-50p.flex.flex-center
-                img.w-100p(src=`./assets/contentsquare.png`, alt="Contentsquare")
+                img.w-100p(src=`./assets/contentsquare-dark.svg`, alt="Contentsquare")
         .flex-none.w-33p.flex.flex-center
           img.h-20.rounded-full(src="./assets/avatar.jpg")
 
-  //- POURQUOI
-  //- Peut-être un blog perso un peu vide
-  //- Ou sa boite qui aimerait un blog tech pour faire rayonner son équipe tech
-  //- Ici sont des conseils en 10mn pour se débloquer, pas des règles immuables
-  //- ---
-  //- Version longue: Blague sur avoir un blog perso sur lequel on a passé du
-  //- temps à choisir le framework, le nom de domaine, les perfs et la CI.
-  //- Maintenant faut écrire dessus...
-  +slide.h-100p
-    +title Écrire sur le blog tech corporate
-    .flex.flex-row.h-100p.flex-wrap
-      each blogName in data.blogs
-        .flex-none.w-25p.flex.flex-center
-          img.shadow-3.w-80p(src=`./assets/blog-${blogName}.png`)
 
-
-
-  //- CASSER LE MYTHE
-  //- Faire un blague sur une recette en 3 points sur comment écrire
-  //- Prendre 2h dans son calendrier
-  //- Penser à une idée et écrire un article dessus
-  //- Le publier sur LinkedIn
-  //- Tourner ça en mode Cancer de LinkedIn
-  //- https://www.topito.com/top-pires-posts-linkedin
+  //- LINKEDIN BULLSHIT
   +slide
-    +title Une recette simple
-    .flex.flex-col.flex-center.h-100p
-      .flex.flex-col.text-5
+    +title Le secret des gens productifs
+    .flex.flex-col.flex-cross-start.flex-main-center.h-100p
+      .flex.flex-col.text-4.ml-10p
         ul
-          li Bookez 2h
-          li Trouvez une idée
-          li Écrivez tout de suite
-          li Publiez
+          li.bullet-blue.bullet-1 Bookez 2h
+          li.bullet-blue.bullet-2 Trouvez une idée
+          li.bullet-blue.bullet-3 Écrivez tout de suite
+          li.bullet-blue.bullet-4 Publiez
+          li.bullet-blue.bullet-5 Partagez sur LinkedIn
 
-  //- PREMIERE CITATION: Par étapes
-  //- Citation pleine page
-  //- Image de Ernest Hemingway, signé par lui (avec un ?)
-  //- Interessante parce que 1/ il n'a jamais dit ça, 2/ il disait le contraire,
-  //- mais 3/ l'idée est que l'état d'esprit entre la rcehrche d'idée et la
-  //- correction est différente
-  //-
-  //- Écriveé bourré, éditez sobre
-  //- Je ne cautionne pas de boire avant d'écrire
-  //- Il faut un état d'esprit différent pour le coté créatif de trouver les
-  //- idées, raconter l'histoire, et corriger les fautes d'orthographe
+  //- ERNEST HEMINGWAY
   +slide
-    .flex.flex-col.flex-center.h-100p
-      .flex.flex-col.text-5 Write drunk, edit sober
+    .flex.flex-row.h-100p
+      .flex-none.w-60p.flex.flex-center.flex-col
+        .flex-col
+          .text-6.text-left.lh-tight.bold.text-shadow.text-shadow-gray.gray-8
+            div Écrivez #[.inline.green.text-shadow bourré],
+            div corrigez #[.inline.green.text-shadow sobre].
+          .text-4.gray-6.mt-4 
+            .inline — Ernest Hemingway
+            .inline.gray-6.text-opacity-25p ?
+      .flex-none.w-40p.h-100p.bg-cover.bg-no-repeat.bg-center(style="background-image:url(./assets/hemingway.jpg")
 
 
-  //- 3 COLONNES
-  //- 3 colonnes avec Fond, Structure et Forme
-  //- Avec des illustrations d'arbres à différentes étapes
+  //- CREATION, NARRATION, EDITION
   +slide
-    +title Fond, Structure et Forme
-    .flex.flex-col.flex-center.h-100p
-      .flex.flex-col.text-5
-        div Fond
-        div Structure
-        div Forme
+    .flex.flex-row.flex-center.h-100p
+      //- Création
+      .flex-none.w-33p.h-100p.flex.flex-row.border-r-01.border-black
+        .relative.flex-auto.bg-no-repeat.bg-cover.bg-center(style="background-image: url(./assets/toys-messy.jpg)")
+          .absolute.p-2.bg-white.bg-opacity-50p.inset-0.flex.flex-col.flex-center
+            .text-6.text-center.purple.bold.text-shadow Création
+
+      //- Narration
+      .flex-none.w-33p.h-100p.flex.flex-row.border-r-01.border-black
+        .relative.flex-auto.bg-no-repeat.bg-cover.bg-center(style="background-image: url(./assets/fairytale.jpg)")
+          .absolute.p-2.bg-white.bg-opacity-50p.inset-0.flex.flex-col.flex-center
+            .text-6.text-center.blue.bold.text-shadow Narration
+
+      //- Édition
+      .flex-none.w-33p.h-100p.flex.flex-row
+        .relative.flex-auto.bg-no-repeat.bg-cover.bg-center(style="background-image: url(./assets/proofread.jpg)")
+          .absolute.p-2.bg-white.bg-opacity-50p.inset-0.flex.flex-col.flex-center
+            .text-6.text-center.teal.bold.text-shadow Édition
 
