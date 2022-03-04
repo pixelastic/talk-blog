@@ -7426,10 +7426,10 @@ hex-rgb@4.3.0:
   resolved "https://registry.npmjs.org/hex-rgb/-/hex-rgb-4.3.0.tgz#af5e974e83bb2fefe44d55182b004ec818c07776"
   integrity sha512-Ox1pJVrDCyGHMG9CFg1tmrRUMRPRsAWYc/PinY0XzJU4K7y7vjNoLKIQ7BR5UJMCxNN8EM1MNDmHWA/B3aZUuw==
 
-highlight.js@10.7.2:
-  version "10.7.2"
-  resolved "https://registry.npmjs.org/highlight.js/-/highlight.js-10.7.2.tgz#89319b861edc66c48854ed1e6da21ea89f847360"
-  integrity sha512-oFLl873u4usRM9K63j4ME9u3etNF0PLiJhSQ8rdfuL51Wn3zkD6drf9ZW0dOzjnZI22YYG24z30JcmfCZjMgYg==
+highlight.js@11.2.0:
+  version "11.2.0"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-11.2.0.tgz#a7e3b8c1fdc4f0538b93b2dc2ddd53a40c6ab0f0"
+  integrity sha512-JOySjtOEcyG8s4MLR2MNbLUyaXqUunmSnL2kdV/KuGJOmHZuAR5xC54Ko7goAXBWNhf09Vy3B+U7vR62UZ/0iw==
 
 highlight.js@^10.7.2:
   version "10.7.3"
@@ -10900,12 +10900,12 @@ norska-theme-default@^2.8.0:
   resolved "https://registry.npmjs.org/norska-theme-default/-/norska-theme-default-2.8.0.tgz#dad5ca621911f53caf93fa20868b49f3cc66ee3e"
   integrity sha512-JJgu/3umF8/Z9JD2LWQZ+4fpO2qNCBI7YbIg468R0Kc5Oa2qtVkUPjq6JdYje7Nlyr7fR61FEDFrhKACWH6s3A==
 
-norska-theme-slides@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/norska-theme-slides/-/norska-theme-slides-1.0.0.tgz#b28963ce9d3e8431c48fcafe0ecf9f10d43b4a4b"
-  integrity sha512-3BwfDiRM35WmYOR+K7gV2dS6fOlq4/43+J4JNltop+zUXIS4PDlCTl6MjdFAPXD+MP/wwuuwBT2WNjg1KDTAwg==
+norska-theme-slides@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/norska-theme-slides/-/norska-theme-slides-1.0.1.tgz#520b78c8183d734124a0dbe5eff62e951764177a"
+  integrity sha512-WAJ3NpbwBZFRYIAcEqFX4T3BPEPaS8UVEI/zTHm3x5d5uB/aY94q8A4+FLlMXl9MtL5+yCnd9cr80N6hGWNtQA==
   dependencies:
-    highlight.js "10.7.2"
+    highlight.js "11.2.0"
 
 norska@2.9.0:
   version "2.9.0"
