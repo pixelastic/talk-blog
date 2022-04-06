@@ -12,5 +12,5 @@ rsync \
   --prune-empty-dirs \
   --compress \
   ./dist/* \
-  pixelastic:/var/www/talks.pixelastic.com/slides/parisjs-blog/
+  pixelastic:/var/www/talks.pixelastic.com/slides/devrel-salon-blog/
 

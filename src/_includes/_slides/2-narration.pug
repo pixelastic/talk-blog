@@ -4,7 +4,7 @@ block content
     .flex.flex-row.h-100p.relative.bg-no-repeat.bg-cover.bg-center(style="background-image: url(./assets/fairytale.jpg)")
       .absolute.bg-white.bg-opacity-75p.inset-0.flex.flex-col.flex-center
         .flex.flex-col
-          .text-9.text-center.blue-5.bold.text-shadow Narration
+          .text-9.text-center.blue-5.bold.text-shadow Storytelling
         
   //- 3 Actes
   mixin actes(start, middle, end)
@@ -13,7 +13,7 @@ block content
         .flex-none.w-25p.bg-no-repeat.bg-cover.bg-center(style="background-image: url(./assets/fairytale.jpg)")
         .flex-none.w-75p.flex.flex-row
           .flex.flex-auto.flex-col
-            +title.blue-5 Une histoire en trois actes
+            +title.blue-5 A story in 3 acts
             .flex-auto.flex.flex-col.flex-center.p-3
               .flex.flex-row.w-100p.h-10.rounded.overflow-hidden
                 .flex-none.w-33p.bg-blue-4.flex.flex-center.white
@@ -23,17 +23,17 @@ block content
                 .flex-none.w-33p.bg-blue-7.flex.flex-center.white
                   .px-1=end
 
-  +actes("Début", "Milieu", "Fin")
-  +actes("Mise en place", "Confrontation", "Résolution")
+  +actes("Beginning", "Middle", "End")
+  +actes("Setup", "Confrontation", "Resolution")
 
   //- JOSS WHEDON
   +slide
     .flex.flex-row.h-100p
       .flex-none.w-60p.flex.flex-center.flex-col
         .flex-col
-          .text-5.text-left.lh-tight.bold.text-shadow.text-shadow-gray.gray-8 
-            div Un auteur gagne sa vie
-            div en #[.inline.blue-5.text-shadow créant] des #[.inline.blue-5.text-shadow conflits].
+          .text-6.text-left.lh-tight.bold.text-shadow.text-shadow-gray.gray-8 
+            div Writers #[.inline.blue-5.text-shadow create]
+            div #[.inline.blue-5.text-shadow conflicts] for a living.
           .text-3.gray-6.mt-4 — Joss Whedon
       .flex-none.w-40p.h-100p.bg-cover.bg-no-repeat.bg-center(style="background-image:url(./assets/whedon.jpg")
 

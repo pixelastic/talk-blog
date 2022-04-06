@@ -4,16 +4,16 @@ block content
     .flex.flex-row.h-100p.relative.bg-no-repeat.bg-cover.bg-center(style="background-image: url(./assets/proofread.jpg)")
       .absolute.bg-white.bg-opacity-75p.inset-0.flex.flex-col.flex-center
         .flex.flex-col
-          .text-9.text-center.teal-5.bold.text-shadow Édition
+          .text-9.text-center.teal-5.bold.text-shadow Editing
 
   //- DEBRANCHEZ VOTRE CERVEAU
   +slide
     .flex.flex-col.h-100p.bg-cover.bg-no-repeat.bg-right(style="background-image:url(./assets/unplug-brain-cropped.jpg") 
       .flex-auto.w-65p.flex.flex-col.flex-main-center
         .text-shadow.white.text-4.pl-5.bold
-          div Débranchez votre cerveau créatif
-          div Passez en pilotage automatique
-          div Détachez-vous de vos idées
+          div Distance yourself from your ideas
+          div Unplug your creative mind
+          div Start the auto-pilot
 
   //- RUBBER DUCK
   +slide
@@ -21,16 +21,16 @@ block content
       .flex-none.w-25p.bg-no-repeat.bg-cover.bg-center(style="background-image: url(./assets/rubber-duck.jpg)")
       .flex-none.w-75p.flex.flex-row
         .flex.flex-auto.flex-col
-          +title.teal-5 Faire comprendre l'histoire à quelqu'un d'autre
+          +title.teal-5 Making sure someone else understands the story
           .flex-auto.flex.flex-col.flex-center.p-3
             .flex.flex-col
-              .italic.text-4.mb-6.bold Écrivez comme si vous parliez à un ami.
+              .italic.text-4.mb-6.bold Write as if you were talking to a friend.
               .gray-8
-                div Permet de :
+                div Allows you to:
                 .ml-5
-                  .bullet-teal-5.bullet-arrow Garder un ton cohérent
-                  .bullet-teal-5.bullet-arrow Rendre le message personnel
-                  .bullet-teal-5.bullet-arrow Donner le bon niveau d'abstraction
+                  .bullet-teal-5.bullet-arrow Keep a consistent tone
+                  .bullet-teal-5.bullet-arrow Deliver a personal message
+                  .bullet-teal-5.bullet-arrow Pick the right level of abstraction
 
   mixin pr_check(title, description, border_class)
       .flex-row.flex.border-gray-4(class=border_class)
@@ -45,7 +45,7 @@ block content
 
   //- BEST PRACTICE AS CODE
   +slide
-    +title.teal-5 Mêmes bonnes pratiques que pour du code
+    +title.teal-5 Similar best practices as in code
     .flex.flex-row.h-100p.flex-center
       .flex.flex-row.w-80p
         //- Merge icon
@@ -55,9 +55,9 @@ block content
         //- List of checks
         .flex-auto.helvetica
           .border-001.border-gray-4.rounded-4.flex.flex-col
-            +pr_check("Linting", "Grammaire, fautes de frappe, capitalisation, liens, etc.", "border-b-001")
-            +pr_check("Peer Review", "Partager le GDoc à des collègues avec droits de suggestion.", "border-b-001")
-            +pr_check("Refactoring", "Supprimer des mots, des phrases et même des paragraphes.")
+            +pr_check("Linting", "Grammar, typos, capitalization, links, etc.", "border-b-001")
+            +pr_check("Peer Review", "Share the GDoc with coworker, with suggestion rights.", "border-b-001")
+            +pr_check("Refactoring", "Remove words, sentences and paragraphs.")
 
 
   //- BLAISE PASCAL
@@ -66,10 +66,9 @@ block content
       .flex-none.w-60p.flex.flex-center.flex-col
         .flex-col
           .text-5.text-left.lh-tight.bold.text-shadow.text-shadow-gray.gray-8
-            div Si j'avais eu
-            div #[.inline.teal-5.text-shadow plus de temps],
-            div j'aurais écrit une lettre
-            div #[.inline.teal-5.text-shadow plus courte].
+            div If I had #[.inline.teal-5.text-shadow more time],
+            div I would have written 
+            div a #[.inline.teal-5.text-shadow shorter letter].
           .text-4.gray-6.mt-4 
             .inline — Blaise Pascal
       .flex-none.w-40p.h-100p.bg-cover.bg-no-repeat.bg-center(style="background-image:url(./assets/blaise-pascal.jpg")
