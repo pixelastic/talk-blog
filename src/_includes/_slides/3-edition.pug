@@ -41,7 +41,7 @@ block content
         //- Name
         .flex.flex-col.flex-main-center.flex-auto.my-3
           .bold.text-2=title
-          .gray-7.text-1=description
+          //- .gray-7.text-1=description
 
   //- BEST PRACTICE AS CODE
   +slide
@@ -58,6 +58,28 @@ block content
             +pr_check("Linting", "Grammaire, fautes de frappe, capitalisation, liens, etc.", "border-b-001")
             +pr_check("Peer Review", "Partager le GDoc à des collègues avec droits de suggestion.", "border-b-001")
             +pr_check("Refactoring", "Supprimer des mots, des phrases et même des paragraphes.")
+
+  //- CI CHECKS
+  mixin ci_examples(text, selectedIndex)
+    -
+      var exampleClasses=[]
+      exampleClasses[selectedIndex]="bg-teal-5 white"
+
+    +slide
+      .flex.flex-row.h-100p
+        .flex-none.w-30p.flex
+          .w-100p.flex.flex-col.flex-auto.text-4
+            .flex.flex-auto.flex-center.border-r-001.border-b-001.border-gray-4(class=exampleClasses[0]) Linting
+            .flex.flex-auto.flex-center.border-r-001.border-b-001.border-gray-4(class=exampleClasses[1]) Peer review
+            .flex.flex-auto.flex-center.border-r-001.border-gray-4(class=exampleClasses[2]) Refactoring
+        .flex-none.w-70p.h-100p.flex.flex-center.p-8
+          .text-5.text-center!=text
+
+  
+  +ci_examples('Correction <span class="teal-5 bold text-shadow">automatique</span><br> de la syntaxe', 0)
+  +ci_examples('Google Doc avec <br /> <span class="teal-5 bold text-shadow">droits de suggestion</span>', 1)
+  +ci_examples('<span class="teal-5 bold text-shadow">Simplifiez</span> et <span class="teal-5 bold text-shadow">supprimez</span>', 2)
+
 
 
   //- BLAISE PASCAL

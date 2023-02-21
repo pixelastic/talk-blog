@@ -5,35 +5,59 @@ block content
       .absolute.bg-white.bg-opacity-75p.inset-0.flex.flex-col.flex-center
         .flex.flex-col
           .text-9.text-center.purple.bold.text-shadow Création
-
-  //- EXEMPLES DE SUJETS
-  +slide
-    +title Exemples de sujets:
-    .flex.flex-col.flex-main-center.h-100p
-      .flex.flex-col.text-3.justify-around.h-100p.mx-10p.my-5
-        .flex.flex-col
-          .bullet-green.bullet-arrow.lh-1 Mentoring
-          .pl-4.text-2.gray-7 Ce que vous auriez aimé savoir il y a un an.
-        .flex.flex-col
-          .bullet-green.bullet-arrow.lh-1 Bug fix
-          .pl-4.text-2.gray-7 Documentez le correctif du dernier bug que vous avez corrigé.
-        .flex.flex-col
-          .bullet-green.bullet-arrow.lh-1 Post-Mortem
-          .pl-4.text-2.gray-7 Expliquez le dernier incident en production et ce que vous avez appris.
-        .flex.flex-col
-          .bullet-green.bullet-arrow.lh-1 Opinion
-          .pl-4.text-2.gray-7 Quelque chose de spécifique, que vous faites différement des autres.
-
-  //- KYAN KHOJANDI
+  
+  //- SUJET ≠ Angle
   +slide
     .flex.flex-row.h-100p
-      .flex-none.w-60p.flex.flex-center.flex-col
+      .flex-none.w-50p.flex.flex-col.flex-center.text-6
+        .text-left
+          div Un #[.green.inline.bold.text-shadow sujet],
+          div plusieurs #[.green.inline.bold.text-shadow angles]
+      .flex-none.w-50p.bg-no-repeat.bg-cover.bg-center(style="background-image: url(./assets/angle.jpg)")
+
+  //- Expert
+  +slide
+    .flex.flex-row.h-100p.relative.bg-no-repeat.bg-cover.bg-left(style="background-image: url(./assets/expert.jpg)")
+      .absolute.bg-white.bg-opacity-75p.inset-0.flex.flex-col
+        .w-75p.h-100p.flex.flex-center
+          .text-left.lh-1
+            .text-7 Je ne suis pas
+            .text-7 un·e #[.inline.green.bold.text-shadow expert·e] 😱 !
+
+
+  //- EXEMPLES DE SUJETS
+  mixin topic_examples(text, selectedIndex)
+    -
+      var exampleClasses=[]
+      exampleClasses[selectedIndex]="bg-purple white"
+
+    +slide
+      .flex.flex-row.h-100p
+        .flex-none.w-30p.flex
+          .w-100p.flex.flex-col.flex-auto.text-4
+            .flex.flex-auto.flex-center.border-r-001.border-b-001.border-gray-4(class=exampleClasses[0]) Mentoring
+            .flex.flex-auto.flex-center.border-r-001.border-b-001.border-gray-4(class=exampleClasses[1]) Bug fix
+            .flex.flex-auto.flex-center.border-r-001.border-b-001.border-gray-4(class=exampleClasses[2]) Post Mortem
+            .flex.flex-auto.flex-center.border-r-001.border-gray-4(class=exampleClasses[3]) Opinion
+        .flex-none.w-70p.h-100p.flex.flex-center.p-8
+          .text-5.text-center!=text
+
+  
+  +topic_examples('Ce que vous auriez <br><span class="purple bold">aimé savoir</span> il y a <span class="purple bold">un an</span>', 0)
+  +topic_examples('<span class="purple bold">Documentez</span> le correctif <br>de votre <span class="purple bold">dernier bug</span>', 1)
+  +topic_examples('Expliquez le dernier <br><span class="purple bold">incident en production</span> <br>et <span class="purple bold">ce que vous avez appris</span>', 2)
+  +topic_examples('Quelque chose de <span class="purple bold">spécifique</span>, que vous faites <br><span class="purple bold">différement des autres</span>', 3)
+
+  //- Navo
+  +slide
+    .flex.flex-row.h-100p.relative
+      .absolute.h-100p.flex-center.flex.pl-8
         .flex-col
           .text-6.text-left.lh-tight.bold.text-shadow.text-shadow-gray.gray-8 
-            div Chaque #[.inline.purple.text-shadow idée] 
-            div est un #[.inline.purple.text-shadow jouet].
-          .text-4.gray-6.mt-4 — Kyan Khojandi
-      .flex-none.w-40p.h-100p.bg-cover.bg-no-repeat.bg-center(style="background-image:url(./assets/kyan.png")
+            div Chaque #[.inline.purple.text-shadow idée] est un #[.inline.purple.text-shadow jouet].
+          .text-4.gray-6.mt-4 — Navo
+      .flex-none.w-60p.flex.flex-center.flex-col
+      .flex-none.w-40p.h-100p.bg-contain.bg-no-repeat.bg-bottom(style="background-image:url(./assets/navo.jpg")
 
 
   //- NOTER LES IDEES
@@ -41,8 +65,8 @@ block content
     .flex.flex-row.h-100p.relative.bg-no-repeat.bg-cover.bg-center(style="background-image: url(./assets/toys-messy.jpg)")
       .absolute.bg-white.bg-opacity-75p.inset-0.flex.flex-col.flex-center
         .flex.flex-col
-          .bullet-arrow.bullet-purple.text-6 Notez toutes vos idées
-          .text-3.gray-7.pl-8 Pour les retrouver plus tard
+          .text-6 Notez #[.inline.bold.text-shadow.purple toutes] vos idées
+          //- .text-3.gray-7.pl-8 Pour les retrouver plus tard
 
 
   //- GROUPER LES IDEES
@@ -50,6 +74,5 @@ block content
     .flex.flex-row.h-100p.relative.bg-no-repeat.bg-cover.bg-center(style="background-image: url(./assets/toys-lego.jpg)")
       .absolute.bg-white.bg-opacity-75p.inset-0.flex.flex-col.flex-center
         .flex.flex-col
-          .bullet-arrow.bullet-purple.text-6 Faites des groupes
-          .text-3.gray-7.pl-8 Pour identifier un angle d'écriture
+          .text-6 Faites des #[.inline.bold.text-shadow.purple groupes]
 
