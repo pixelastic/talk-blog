@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh pr list:*)",
+      "Read(//home/tim/local/www/pixelastic.com/www.pixelastic.com/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
